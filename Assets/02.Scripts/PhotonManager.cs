@@ -43,6 +43,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom("My Room", op);
     }
 
+    //콜백 함수 (Call Back Function) , 이벤트 함수(Event Function)
     public override void OnJoinedRoom()
     {
         Debug.Log("Create and Joined Room !!!");
