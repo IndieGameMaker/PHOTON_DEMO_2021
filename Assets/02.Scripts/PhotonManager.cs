@@ -8,7 +8,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 {
     public const string version = "1.0"; //버전별로 접속할 수 있게하는 역할
     public string userName = "Zack";
-    public byte maxPlayerCount = 4;
+    public byte maxPlayerCount = 20;
 
     void Awake()
     {
