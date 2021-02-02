@@ -1,3 +1,4 @@
+#pragma warning disable IDE0044, IDE0051, IDE0052
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,9 @@ using Photon.Realtime;
 
 public class PhotonManager : MonoBehaviourPunCallbacks
 {
-    public const string version = "1.0"; //버전별로 접속할 수 있게하는 역할
-    public string userName = "Zack";
-    public byte maxPlayerCount = 20;
+    private const string version = "1.0"; //버전별로 접속할 수 있게하는 역할
+    private string userName = "Zack";
+    private byte maxPlayerCount = 20;
 
     void Awake()
     {
@@ -20,6 +21,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.NickName = userName;
         PhotonNetwork.GameVersion = version;
+        Debug.Log(version);
 
         PhotonNetwork.ConnectUsingSettings();
     }
@@ -49,5 +51,4 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         Debug.Log("Create and Joined Room !!!");
         PhotonNetwork.Instantiate("Tank", Vector3.zero, Quaternion.identity, 0);
     }
-
 }
